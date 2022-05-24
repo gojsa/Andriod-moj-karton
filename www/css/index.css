@@ -26,9 +26,9 @@ body {
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     /* background-color:#E4E4E4;
     background-image:linear-gradient(to bottom, #A7A7A7 0%, #E4E4E4 51%); */
-    background-image: url("../img/pozadina.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-image: url("../img/pozadina.png"); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
     font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
     font-size:12px;
     height:100vh;
@@ -108,9 +108,50 @@ h1 {
 
  /* Landing page  */
 /* //Dizajn za mobitele// */
+body{
+    background: #2daaaa;
+}
+.hide-element{
+    display: none !important;
+}
+.menu-podaci-img{
+    vertical-align: middle;
+}
+.logout-li{
+    display: inline;
+}
+.logo-menu{
+    place-content: center;
+}
+.menu-item,.logout-d,.logo-menu{
+    display: grid;
+    align-items: center;
+}
+.wraper-menu{
+    position: fixed;
+    display: grid;
+    height: 100vh;
+    background: #2daaaa;
+    width: 40%;  
+    right: 100%;
+    transition: right .3s ease-in-out;
+}
+.class-open-menu{
+    top: 70px;
+    border-radius: 20px;
+    width: 100%;
+    left: 67% !important;
+    
+}
 
 .wraper-dzo{
-   
+    background-image: url(../img/pozadina.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+    position: relative;
+    left: 0;
+    transition: left .3s ease-in-out;
     height: 100%;
     grid-template-areas:
     "wraper-header"
@@ -147,6 +188,9 @@ h1 {
 .font-class-title-dz{
     font-size: 14px;
     font-weight: 500;
+    font-size: 16px;
+    text-shadow: 0 0 2px #2a2a2a;
+    color: white;
 }
 
 .sos-in-title{

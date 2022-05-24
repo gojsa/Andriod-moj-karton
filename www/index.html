@@ -28,20 +28,85 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
+       
         <link rel="stylesheet" href="css/index.css">
-        <title>Hello World</title>
+        <title>Moj karton</title>
     </head>
     <body>
         <div class="app">
             <div id="deviceready" class="blink">
+                
+                <div class="wraper-menu">
+                    <div class="close-menu">
+                        <img src="./img/x.png" alt="" srcset="">
+                    </div>
+                    <div class="logo-menu">
+                        <img src="./img/phone-dzo.png" alt="" srcset="">
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-podaci">
+                            <img class="menu-podaci-img" src="./img/phone-dzo.png" alt="">
+                            <li class="logout-li">Podaci o pacijentu</li>
+                        </div>
+                        <div class="menu-uputnice">
+                            <img class="menu-podaci-img" src="./img/phone-dzo.png" alt="">
+                            <li class="logout-li">Uputnice</li>
+                        </div>
+                        <div class="menu-labaratorija">
+                            <img class="menu-podaci-img" src="./img/phone-dzo.png" alt="">
+                            <li class="logout-li">Labaratorija</li>
+                        </div>
+                        <div class="menu-recepti">
+                            <img class="menu-podaci-img" src="./img/phone-dzo.png" alt="">
+                            <li class="logout-li">Recepti</li>
+                        </div>
+                        <div class="menu-bolovanja">
+                            <img class="menu-podaci-img" src="./img/phone-dzo.png" alt="">
+                            <li class="logout-li">Bolovanja</li>
+                        </div>
+                        <div class="menu-terapije">
+                            <img class="menu-podaci-img" src="./img/phone-dzo.png" alt="">
+                            <li class="logout-li">Terapije</li>
+                        </div>
+                        <div class="menu-alergije">
+                            <img class="menu-podaci-img" src="./img/phone-dzo.png" alt="">
+                            <li class="logout-li">Alergija</li>
+                        </div>
+                        <div class="menu-oboljenja">
+                            <img class="menu-podaci-img" src="./img/phone-dzo.png" alt="">
+                            <li class="logout-li">Oboljenja</li>
+                        </div>
+                        <div class="menu-porodica">
+                            <img class="menu-podaci-img" src="./img/phone-dzo.png" alt="">
+                            <li class="logout-li">Članovi porodice</li>
+                        </div>
+                        <div class="menu-logovanja">
+                            <img class="menu-podaci-img" src="./img/phone-dzo.png" alt="">
+                            <li class="logout-li">Pregled logovanja</li>
+                        </div>
+                    
+                    </div>
+                    <div class="logout-d">
+                        <div>
+                            <img class="menu-podaci-img" src="./img/phone-dzo.png" alt="">
+                            <li class="logout-li">Odjavi se</li>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
                 <div class="wraper-dzo">
                     <div class="wraper-header">
-                        <img src="./img/hamburger.png" alt="" srcset="">
+                        <img id="openMenu" src="./img/hamburger.png" alt="" srcset="">
                         <i class="title-header font-class-title-dz">Početna</i>  
                     </div>
                     <div class="dzo-container">
@@ -68,14 +133,29 @@
                     <div id="wraper_body" class="wraper-body">
 
                     </div>
-
+                    
                 </div>
 
-              
+                
                     
             </div>
         </div>
+        
         <script src="cordova.js"></script>
         <script src="js/index.js"></script>
+        <script>
+            const sideMenu = document.getElementById("openMenu");
+    console.log(123)
+        sideMenu.addEventListener("click",()=>{
+            document.querySelector(".title-header").classList.add("hide-element");
+            document.querySelector(".wraper-dzo").classList.add("class-open-menu");
+            document.querySelector(".wraper-header").style.height = "130px";
+            document.querySelector(".wraper-header").classList.add("hide-element");
+            document.querySelector(".wraper-menu").style.right = "60%" 
+            document.querySelector(".dzo-container").style.paddingTop = "50px" 
+        })
+        </script>
+       
+       
     </body>
 </html>
